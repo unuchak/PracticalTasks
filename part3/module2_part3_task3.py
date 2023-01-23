@@ -9,10 +9,11 @@
 
 month = int(input("Введите месяц\n"))
 
-winter = 12, 1, 2
+winter = 12, 1, 2, 4
 spring = 3, 4, 5
 summer = 6, 7, 8
 autumn = 9, 10, 11
+print(type(winter))
 
 if (winter.count(month) > 0):
     print("Winter")

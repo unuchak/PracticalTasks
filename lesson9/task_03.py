@@ -16,7 +16,8 @@ def call_age(age):
 
 def main():
     age = int(input("Input your age: "))
-    print(call_age(age))
+    msg = call_age(age)
+    print(msg)
 
 
 main()

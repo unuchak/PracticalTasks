@@ -66,3 +66,4 @@ def test_suite():
 
 
 test_suite()
+main()

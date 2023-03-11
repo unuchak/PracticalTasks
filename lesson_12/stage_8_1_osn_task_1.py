@@ -38,4 +38,18 @@ Sum of negative numbers  {sum_of_negative}"""
     print(msg)
 
 
+def test():
+    numbers = [7, 9, -4, 0]
+    sum_of_positive = sum_of_positive_numbers(numbers)
+    sum_of_negative = sum_of_negative_numbers(numbers)
+    return sum_of_positive == 16 and sum_of_negative == -4
+
+
+def test_suite():
+    msg = f" test = {test()}"
+    print(msg)
+
+
+test_suite()
+
 main()

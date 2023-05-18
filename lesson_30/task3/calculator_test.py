@@ -5,13 +5,20 @@ from calculator import Calculator
 
 
 class CalculatorTest(TestCase):
+    def setUp(self):
+        print("###setUp###")
+        self.calculator = Calculator()
+
+    def tearDown(self):
+        print("###tearDown###")
+        del self.calculator
 
     def testAddPositive(self):
         a = 5
         b = 6
         expected = 11
 
-        actual = Calculator.add(a, b)
+        actual = self.calculator.add(a, b)
 
         self.assertEqual(expected, actual, f"actual: {actual} but was expected {expected}")
 
@@ -20,7 +27,7 @@ class CalculatorTest(TestCase):
         b = 6
         expected = -1
 
-        actual = Calculator.sub(a, b)
+        actual = self.calculator.sub(a, b)
 
         self.assertEqual(expected, actual, f"actual: {actual} but was expected {expected}")
 
@@ -29,7 +36,7 @@ class CalculatorTest(TestCase):
         b = 6
         expected = 30
 
-        actual = Calculator.mul(a, b)
+        actual = self.calculator.mul(a, b)
 
         self.assertEqual(expected, actual, f"actual: {actual} but was expected {expected}")
 
@@ -38,7 +45,7 @@ class CalculatorTest(TestCase):
         b = 2
         expected = 5
 
-        actual = Calculator.div(a, b)
+        actual = self.calculator.div(a, b)
 
         self.assertEqual(expected, actual, f"actual: {actual} but was expected {expected}")
 

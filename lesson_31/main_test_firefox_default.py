@@ -7,6 +7,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service
 
 
+# See for setup https://www.selenium.dev/selenium/docs/api/py/
 class TestTestrail(unittest.TestCase):
 
     def test_required_fields(self):
